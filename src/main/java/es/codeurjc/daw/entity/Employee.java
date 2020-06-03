@@ -40,7 +40,7 @@ public class Employee extends BaseEntity {
 		job.setEmployee(this);
 	}
 
-	public void removeComment(Job job) {
+	public void removeJob(Job job) {
 		jobs.remove(job);
 		job.setEmployee(null);
 	}
