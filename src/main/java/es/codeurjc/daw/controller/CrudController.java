@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import es.codeurjc.daw.controller.dto.BaseDTO;
+import es.codeurjc.daw.controller.dto.BaseDto;
 import es.codeurjc.daw.service.CrudService;
 import io.swagger.annotations.ApiOperation;
 
-public abstract class CrudController<T extends BaseDTO> {
+public abstract class CrudController<T extends BaseDto> {
 
     private CrudService<T> service;
 

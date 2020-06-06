@@ -1,22 +1,19 @@
 package es.codeurjc.daw.controller.dto;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import java.util.Date;
-
-@SuperBuilder
 @Data
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class BaseDTO {
-
-    @ApiModelProperty(value = "The id of the object")
-    private Long id;
-
-    @ApiModelProperty(value = "The date when the object was created")
-    private Date creationDate;
+@ApiModel(value = "Department")
+public class DepartmentDto extends BaseDto {
+	
+    @ApiModelProperty(value = "Department name")
+    private String departmentName;
 }
