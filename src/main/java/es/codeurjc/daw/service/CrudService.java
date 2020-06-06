@@ -3,9 +3,9 @@ package es.codeurjc.daw.service;
 import java.util.List;
 import java.util.Optional;
 
-import es.codeurjc.daw.controller.dto.BaseDTO;
+import es.codeurjc.daw.controller.dto.BaseDto;
 
-public interface CrudService<T extends BaseDTO> {
+public interface CrudService<T extends BaseDto> {
 
     List<T> findAll();
 
