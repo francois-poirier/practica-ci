@@ -227,7 +227,7 @@
 				<sonar.sources>.</sonar.sources>
 				<sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
 				<sonar.exclusions>${code.coverage.exclusions}</sonar.exclusions>
-				<sonar.projectKey>francois-poirier</sonar.projectKey>
+				<sonar.projectKey>francois-poirier_practica-ci</sonar.projectKey>
 				<sonar.organization>francois-poirier</sonar.organization>
 				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 			</properties>
