@@ -26,7 +26,6 @@ public class Employee extends BaseEntity {
 	private String firstName;
 	private String lastName;
 	private Long salary;
-	private LocalDate hireDate;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "department_id")

@@ -18,6 +18,7 @@ import com.google.gson.JsonObject;
 public class TestDataProvider {
 
     private static final String DEPARTMENT_JSON_PATH = "data/department.json";
+    private static final String EMPLOYEE_JSON_PATH = "data/employee.json";
 
     
     public static JsonObject getDepartmentJson(){
@@ -25,6 +26,11 @@ public class TestDataProvider {
         return mapStringToJsonObject(noticeString);
     }
 
+    public static JsonObject getEmployeeJson(){
+        String noticeString = getJsonString(EMPLOYEE_JSON_PATH);
+        return mapStringToJsonObject(noticeString);
+    }
+    
     private static String getJsonString(String path) {
         Resource resource = getResource(path);
         return mapResourceToString(resource);
