@@ -20,7 +20,7 @@ public class TestDataProvider {
     private static final String DEPARTMENT_JSON_PATH = "data/department.json";
 
     
-    public static JsonObject getNoticeJson(){
+    public static JsonObject getDepartmentJson(){
         String noticeString = getJsonString(DEPARTMENT_JSON_PATH);
         return mapStringToJsonObject(noticeString);
     }
