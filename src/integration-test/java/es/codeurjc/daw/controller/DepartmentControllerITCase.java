@@ -75,7 +75,7 @@ public class DepartmentControllerITCase extends CrudControllerITCase {
         //then
         response.statusCode(HttpStatus.CREATED.value())
                 .body("id", notNullValue())
-                .body("departmentName", equalTo("Sales"));
+                .body("departmentName", equalTo("Export"));
     }
 
     @Test
