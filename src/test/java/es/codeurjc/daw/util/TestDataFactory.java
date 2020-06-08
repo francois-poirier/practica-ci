@@ -6,8 +6,10 @@ import java.util.stream.LongStream;
 
 import es.codeurjc.daw.controller.dto.DepartmentDto;
 import es.codeurjc.daw.controller.dto.EmployeeDto;
+import es.codeurjc.daw.controller.dto.JobDto;
 import es.codeurjc.daw.entity.Department;
 import es.codeurjc.daw.entity.Employee;
+import es.codeurjc.daw.entity.Job;
 
 public class TestDataFactory {
 
@@ -62,6 +64,35 @@ public class TestDataFactory {
                 .firstName("First name " + id)
                 .lastName("Last name " + id)
                 .salary(1000*id)
+                .build();
+    }
+    
+    public static Job getSingleJob(Long id){
+        return Job.builder()
+                .id(id)
+                .jobTitle("Job title " + id)
+                .maxSalary(2000*id)
+                .minSalary(1000*id)
+                .build();
+    }
+
+    public static List<Job> getJobList(Long jobsCount) {
+    	 return LongStream.rangeClosed(1, jobsCount)
+                 .mapToObj(TestDataFactory::getSingleJob)
+                 .collect(Collectors.toList());
+    }
+    
+    public static List<JobDto> getJobListDTO(Long jobsCount) {
+        return LongStream.rangeClosed(1, jobsCount)
+                .mapToObj(TestDataFactory::getSingleJobDto)
+                .collect(Collectors.toList());
+    }
+
+    public static JobDto getSingleJobDto(Long id){
+        return JobDto.builder()
+                .jobTitle("Job title " + id)
+                .maxSalary(2000*id)
+                .minSalary(1000*id)
                 .build();
     }
 
