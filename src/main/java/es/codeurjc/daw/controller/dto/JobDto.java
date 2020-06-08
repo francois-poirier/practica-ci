@@ -11,13 +11,13 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "Employee")
-public class EmployeeDto extends BaseDto {
-	
-    @ApiModelProperty(value = "firstName")
-	private String firstName;
-    @ApiModelProperty(value = "lastName")
-	private String lastName;
-    @ApiModelProperty(value = "salary")
-	private Long salary;
+@ApiModel(value = "Job")
+public class JobDto extends BaseDto {
+
+    @ApiModelProperty(value = "jobTitle")
+	private String jobTitle;
+    @ApiModelProperty(value = "minSalary")
+    private Long minSalary;
+    @ApiModelProperty(value = "maxSalary")
+	private Long maxSalary;
 }

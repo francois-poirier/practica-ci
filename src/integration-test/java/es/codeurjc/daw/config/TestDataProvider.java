@@ -19,6 +19,7 @@ public class TestDataProvider {
 
     private static final String DEPARTMENT_JSON_PATH = "data/department.json";
     private static final String EMPLOYEE_JSON_PATH = "data/employee.json";
+    private static final String JOB_JSON_PATH = "data/job.json";
 
     
     public static JsonObject getDepartmentJson(){
@@ -30,6 +31,12 @@ public class TestDataProvider {
         String noticeString = getJsonString(EMPLOYEE_JSON_PATH);
         return mapStringToJsonObject(noticeString);
     }
+    
+    public static JsonObject getJobJson(){
+        String noticeString = getJsonString(JOB_JSON_PATH);
+        return mapStringToJsonObject(noticeString);
+    }
+    
     
     private static String getJsonString(String path) {
         Resource resource = getResource(path);
